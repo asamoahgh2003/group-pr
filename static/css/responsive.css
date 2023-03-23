@@ -1,0 +1,52 @@
+@media (max-width: 1280px) {
+  .item {
+    min-width: 30%;
+    flex-grow: 1;
+  }
+
+  .item__img {
+    max-width: 100%;
+  }
+
+  .deals__container {
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+    transition: ease all 0.5s;
+  }
+
+  .first__deal,
+  .contact {
+    width: 100%;
+    margin-top: 4rem;
+    justify-content: space-between;
+  }
+
+  .contact {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 737px) {
+  .item__img {
+    height: 100%;
+    max-height: 300px;
+  }
+
+  .item__description {
+    font-size: 1.5rem;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 530px) {
+  .item__description {
+    font-size: 12px;
+  }
+
+  .item__container,
+  .main__container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

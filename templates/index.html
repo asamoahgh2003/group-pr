@@ -1,0 +1,770 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--========= CSS LINKED FILE ========= -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+    <!-- =========== FONT AWESOME LINK ========= -->
+    <link rel="stylesheet" href="{% static 'https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' %}" />
+    <!--========== JAVASCRIPT LINKED FILE  ==========-->
+    <script src="{% static 'js/app.js' %}" defer></script>
+    <script type="module" src="{% static 'js/laptops.js' %}" defer></script>
+    <script type="module" src="{% static 'js/nav.js' %}" defer></script>
+    <script type="module" src="{% static 'js/footer.js' %}" defer></script>
+    <script src="{% static 'https://kit.fontawesome.com/cad71ff785.js' %}" crossorigin="anonymous"></script>
+    <title>OS-TECH</title>
+  </head>
+
+  <body>
+    <section id="landing">
+      <my-nav></my-nav>
+      <header>
+        <div class="header__container container">
+          <div class="row row__container">
+            <ul class="header__items">
+              <li class="header__item" onclick="changeText('Apple iPhone 14 Pro Max', '$569.99'); 
+                changeImage('Products/hotsale/Iphone14.png')">
+                <a class="header-items__background" href="#">Smartphones</a>
+              </li>
+              <li class="header__item gaming" onclick="changeText('Xbox One', '$249.99'); 
+                changeImage('Products/hotsale/xbox one.png')">
+                <a href="#">Gaming</a>
+              </li>
+              <li class="header__item" onclick="changeText('FitBit Series 3', '$99.99');  
+                changeImage('Products/hotsale/watch.png')">
+                <a href="#">Watches</a>
+              </li>
+              <li class="header__item" onclick="changeText('Oculus Rift 3', '$4549.99');  
+                changeImage('Products/hotsale/virtual reality.png')">
+                <a href="#">Virtual Reality</a>
+              </li>
+              <li class="header__item" onclick="changeText('Beoplay HX 5', '$699.49');  
+                changeImage('Products/hotsale/headset.png')">
+                <a href="#">Headsets</a>
+              </li>
+              <li class="header__item" onclick="changeText('Puxnoin Multi-USB Cables', '$11.29');  
+                 changeImage('Products/hotsale/cables.png')">
+                <a href="#">Cables</a>
+              </li>
+              <li class="header__item" onclick="changeText('Uplink Internet Router', '$47.99'); 
+                 changeImage('Products/hotsale/more.png')">
+                <a href="#">More</a>
+              </li>
+            </ul>
+            <div class="header__items2">
+              <div class="header__description">
+                <h1>Hot Sale of The Week</h1>
+                <h2>Apple iPhone 14 Pro Max</h2>
+                <h3 class="ostech__color">$569.99</h3>
+                <button class="main__btn">Shop Now</button>
+              </div>
+              <figure>
+                <img class="header-items2__img" src="{% static 'Products/./hotsale/Iphone14.png' %}" alt="iphone 14 pro max" />
+              </figure>
+            </div>
+            <div class="header__items3">
+              <div class="brand">
+                <figure class="header-items3__img--wrapper surface__color">
+                  <img class="brand__img" src="{% static 'Products/headphone.jpg' %}" alt="headphone" />
+                  <figcaption class="brand__name">
+                    <a href="#">JBL</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="brand">
+                <figure class="header-items3__img--wrapper surface__color">
+                  <img class="brand__img" src="{% static 'Products/ps5 controller.jpg' %}" alt="ps5 controller" />
+                  <figcaption class="brand__name">
+                    <a href="#">SONY</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="brand">
+                <figure class="header-items3__img--wrapper surface__color">
+                  <img class="brand__img" src="{% static 'Products/samsung.jpg' %}" alt="samsung phone" />
+                  <figcaption class="brand__name">
+                    <a href="#">SAMSUNG</a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="valentine__products row">
+          <div class="valentine__container">
+            <div class="valentine__offer">
+              <h2>Special Valentine Offer</h2>
+              <p>One all goods</p>
+              <div class="offer">
+                <h2>30%</h2>
+                <p>Off</p>
+              </div>
+            </div>
+            <div class="product">
+              <a href="#">
+                <img class="product__img" src="{% static 'Products/watch.png' %}" alt="smart watch" />
+              </a>
+              <p class="product__name"><a href="#">Smart Watches</a></p>
+              <div class="product__percentage">-25%</div>
+            </div>
+            <div class="product">
+              <a href="#">
+                <img class="product__img" src="{% static 'Products/laptop.png' %}" alt="laptop" />
+              </a>
+              <p class="product__name"><a href="#">Laptops</a></p>
+              <div class="product__percentage">-15%</div>
+            </div>
+            <div class="product">
+              <a href="#">
+                <img class="product__img" src="{% static 'Products/digital camera.png' %}" alt="digital camera" />
+              </a>
+              <p class="product__name"><a href="#">Digital Cameras</a></p>
+              <div class="product__percentage">-40%</div>
+            </div>
+            <div class="product">
+              <a href="#">
+                <img class="product__img" src="{% static 'Products/headphone.png' %}" alt="headphone" />
+              </a>
+              <p class="product__name"><a href="#">Headphones</a></p>
+              <div class="product__percentage">-25%</div>
+            </div>
+            <div class="product">
+              <a href="#">
+                <img class="product__img" src="{% static 'Products//techno.png' %}" alt="smart watch" />
+              </a>
+              <p class="product__name"><a href="#">Samsung Phones</a></p>
+              <div class="product__percentage">-25%</div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+    <main>
+      <!-- TOP SELLING SECTION -->
+      <section id="top-selling__section">
+        <div class="main__container">
+          <div class="row main__row">
+            <div class="top__header--wrapper">
+              <div class="first">
+                <h1 class="top__header">Top Selling Items</h1>
+                <span><i class="fa-solid fa-trophy"></i></span>
+              </div>
+              <div class="second">
+                <a href="#" class="viewall">
+                  <h2 class="viewall__h2">View All</h2>
+                  <div class="viewall__arrow">></div>
+                </a>
+              </div>
+            </div>
+            <div class="item__container">
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/oriamo.png' %}" alt="oriamo airpods" />
+                </figure>
+                <p class="item__category"><a href="#">Accessories</a></p>
+                <h2 class="item__name"><a href="#">Oraimo Freepods 3</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$290</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/xbox360.png' %}" alt="xbox 360" />
+                </figure>
+                <p class="item__category"><a href="#">Gaming</a></p>
+                <h2 class="item__name"><a href="#">Xbox 360</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$455</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/seagate.png' %}" alt="seagate hardrive" />
+                </figure>
+                <p class="item__category"><a href="#">Accessories</a></p>
+                <h2 class="item__name"><a href="#">Seagate Hard Drive</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$217.55</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/lgtv.png' %}" alt="lg television" />
+                </figure>
+                <p class="item__category"><a href="#">Televisions</a></p>
+                <h2 class="item__name"><a href="#">LG UHD Television</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$4559.90</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/fuji camera.png' %}" alt="fuji camera" />
+                </figure>
+                <p class="item__category"><a href="#">Cameras</a></p>
+                <h2 class="item__name"><a href="#">Fuji XT3 Camera</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$389.75</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/beats solo 3.png' %}"
+                    alt="beats solo headphone" />
+                </figure>
+                <p class="item__category"><a href="#">Accessories</a></p>
+                <h2 class="item__name"><a href="#">Beats Solo 3</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$78.55</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/logitech mouse.png' %}" alt="logitech mouse" />
+                </figure>
+                <p class="item__category"><a href="#">Accessories</a></p>
+                <h2 class="item__name"><a href="#">Logitech Mouse</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$369.99</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="top-items__container"></div>
+          </div>
+        </div>
+      </section>
+      <section id="clearance__section">
+        <div class="main__container">
+          <div class="row main__row">
+            <div class="top__header--wrapper">
+              <div class="first">
+                <h1 class="top__header">Top Clearance Sales</h1>
+                <span><i class="fa-solid fa-trophy"></i></span>
+              </div>
+              <div class="second">
+                <a href="#" class="viewall">
+                  <h2 class="viewall__h2">View All</h2>
+                  <div class="viewall__arrow">></div>
+                </a>
+              </div>
+            </div>
+            <div class="item__container">
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="top-items__container"></div>
+          </div>
+        </div>
+      </section>
+      <my-contact></my-contact>
+
+      <section id="top-selling__section">
+        <div class="main__container">
+          <div class="row main__row">
+            <div class="top__header--wrapper">
+              <div class="first">
+                <h1 class="top__header">Top Clearance Sales</h1>
+                <span><i class="fa-solid fa-trophy"></i></span>
+              </div>
+              <div class="second">
+                <a href="#" class="viewall">
+                  <h2 class="viewall__h2">View All</h2>
+                  <div class="viewall__arrow">></div>
+                </a>
+              </div>
+            </div>
+            <div class="item__container">
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <figure class="item__img--wrapper">
+                  <img class="item__img" src="{% static 'Products/top selling items/2015 Macbook pro.png' %}" alt="Macbook pro" />
+                </figure>
+                <p class="item__category"><a href="#">Laptops/Computers</a></p>
+                <h2 class="item__name"><a href="#">2015 MacBook Pro</a></h2>
+                <h2 class="item__description">
+                  13.3inch Retina Display, 2.7GHz, 8GB RAM, 256 GB SSD, Inter
+                  Iris Graphics
+                </h2>
+                <div class="price-buy__container">
+                  <h3 class="item__price">$289</h3>
+                  <p class="item__buy">
+                    <a href="#">
+                      Buy
+                      <span><i class="fa-solid fa-bag-shopping"></i></span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="top-items__container"></div>
+          </div>
+        </div>
+      </section>
+      <!-- <my-desktop></my-desktop> -->
+      <section id="partners__section">
+        <div class="main__container">
+          <div class="row main__row">
+            <div class="top__header--wrapper">
+              <div class="first">
+                <h1 class="top__header partners__header">Our Brand Partners</h1>
+                <span><i class="fa-solid fa-handshake-simple"></i></span>
+              </div>
+            </div>
+            <div class="item__container">
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/google.png' %}"
+                    alt="google logo" />
+                </figure>
+              </div>
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/samsung.png' %}"
+                    alt="samsung logo" />
+                </figure>
+              </div>
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/apple.png' %}"
+                    alt="apple logo" />
+                </figure>
+              </div>
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/sony.png' %}"
+                    alt="sony logo" />
+                </figure>
+              </div>
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/nokia.png' %}"
+                    alt="nokia logo" />
+                </figure>
+              </div>
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/acer.png' %}"
+                    alt="acer logo" />
+                </figure>
+              </div>
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/asus.png' %}"
+                    alt="asus logo" />
+                </figure>
+              </div>
+              <div class="item item__partners">
+                <figure class="item__img--wrapper">
+                  <img class="item__img item__img--partners" src="{% static 'Products/brand partners/hp.png' %}" alt="hp logo" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT OFFER BOXES  -->
+      <contact-offer></contact-offer>
+      <!-- NEWS LETTER SECTION  -->
+      <my-news-letter></my-news-letter>
+    </main>
+    <!-- FOOTER OF THE WEBSITE  -->
+    <my-footer></my-footer>
+    <my-copyright></my-copyright>
+  </body>
+
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--========== CSS LINKED FILE  ==========-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+    <!--========== FONT AWESOME LINK  ==========-->
+    <script
+      src="{% static 'https://kit.fontawesome.com/cad71ff785.js' %}"
+      crossorigin="anonymous"
+    ></script>
+    <!--========== JAVASCRIPT LINKED FILES  ==========-->
+    <script type="module" src="{% static 'js/app.js' %}" defer></script>
+    <script type="module" src="{% static 'js/contact.js' %}" defer></script>
+    <script type="module" src="{% static 'js/nav.js' %}" defer></script>
+    <script type="module" src="{% static 'js/footer.js' %}" defer></script>
+    <title>OSTECH</title>
+  </head>
+  <body>
+    <my-nav></my-nav>
+    <my-contact></my-contact>
+    <contact-offer></contact-offer>
+    <my-news-letter></my-news-letter>
+  </body>
+  <my-footer></my-footer>
+  <my-copyright></my-copyright>
+</html>
